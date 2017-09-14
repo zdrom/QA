@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\lineItem;
+
 class LineItemController extends Controller
 {
-    public function index()
+    public function show(LineItem $lineItem)
     {
-    	return 'Line Items';
+    	return view('lineItem.index', compact('campaign', 'lineItem'));
     }
 }

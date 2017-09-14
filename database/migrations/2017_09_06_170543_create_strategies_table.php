@@ -16,7 +16,7 @@ class CreateStrategiesTable extends Migration
         Schema::create('strategies', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('line_items_id')->nullable();
+            $table->integer('line_item_id')->nullable();
             $table->string('line_item_name')->nullable();
             $table->string('name')->nullable();
             $table->longText('geography_zip')->nullable();

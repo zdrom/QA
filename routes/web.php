@@ -18,6 +18,10 @@ Route::get('/create', 'UploadController@create');
 Route::post('/create', 'UploadController@store');
 
 Route::get('/campaign/{campaign}', 'UploadController@show');
+
+Route::get('/lineItem/{lineItem}' , 'LineItemController@show');
+
+Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

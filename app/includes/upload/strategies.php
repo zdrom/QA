@@ -7,7 +7,7 @@ $sheet->each(function($row) {
 
     Strategy::create([
 
-        'line_items_id' => LineItem::nameToID($row->lineitemname),
+        'line_item_id' => LineItem::nameToID($row->lineitemname),
         'line_item_name' => $row->lineitemname,
         'name' => $row->name,
         'geography_zip' => $row->geography_zip,

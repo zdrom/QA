@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="col-12">
-	<h1>{{ $campaign->campaign_name }}</h1>
+	<h3>{{ $campaign->campaign_name }}</h3>
 </div>
 
 <div class="col-12">
@@ -21,8 +21,9 @@
 	  <div class="card-block">
 	    <h4 class="card-title">Line Items</h4>
 	    @foreach($campaign->lineItems as $lineItem)
-	    <p>{{ $lineItem->lineitemname }}</p>
-	    <p>${{ $lineItem->io_line_item_budget }}</p>
+	    <a href="/lineItem/{{ $lineItem->id }}">
+	    	<p>{{ $lineItem->lineitemname }}</p>
+	    </a>
 	    <hr>
 	    @endforeach
 	  </div>
