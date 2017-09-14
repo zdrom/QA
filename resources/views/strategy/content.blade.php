@@ -1,0 +1,1 @@
+Content: {{ $strategy->content_appsite_type }}
