@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item @yield('uploadActive')">
-        <a class="nav-link" href="/campaign">Upload <span class="sr-only"></span></a>
+        <a class="nav-link" href="/create">Upload <span class="sr-only"></span></a>
       </li>
       <li class="nav-item @yield('allCampaignsActive')">
         <a class="nav-link" href="/">All Campaigns <span class="sr-only"></span></a>

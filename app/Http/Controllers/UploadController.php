@@ -33,7 +33,7 @@ class UploadController extends Controller
 
 		Upload::saveExport($path);
 
-		return redirect ('/campaign');
+		return redirect ('/create');
 	}
 
 	public function show(CampaignProperty $campaign)

@@ -13,9 +13,9 @@
 
 Route::get('/', 'UploadController@index');
 
-Route::get('/campaign', 'UploadController@create');
+Route::get('/create', 'UploadController@create');
 
-Route::post('/campaign', 'UploadController@store');
+Route::post('/create', 'UploadController@store');
 
 Route::get('/campaign/{campaign}', 'UploadController@show');
 Auth::routes();

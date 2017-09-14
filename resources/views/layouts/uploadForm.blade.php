@@ -5,7 +5,7 @@
 		    Upload a Campaign Export
 		  </div>
 		  <div class="card-block">
-		    <form method="POST" action="/campaign" enctype='multipart/form-data'>
+		    <form method="POST" action="/create" enctype='multipart/form-data'>
 		    	{{ csrf_field() }}
 
 				<div class="form-group">
