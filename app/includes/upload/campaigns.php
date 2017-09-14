@@ -1,12 +1,12 @@
 <?php
 
-use App\CampaignProperty;
+use App\Campaign;
 
 $cp = $reader->getSheetByName('Campaign Properties');
 
 $GLOBALS['campaignName'] = $cp->getCell('B1');
 
-CampaignProperty::create([
+Campaign::create([
 
 	'user_id' => auth()->id(),
 	'campaign_name' => $cp->getCell('B1'),

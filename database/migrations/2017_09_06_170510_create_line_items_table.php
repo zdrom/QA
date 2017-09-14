@@ -15,8 +15,7 @@ class CreateLineItemsTable extends Migration
     {
         Schema::create('line_items', function (Blueprint $table) {
             $table->increments('id');
-
-            $table->integer('campaign_property_id')->nullable();
+            $table->integer('campaign_id')->nullable();
             $table->integer('line_item_id')->nullable();
             $table->string('lineitemname')->nullable();
             $table->decimal('io_line_item_budget')->nullable();

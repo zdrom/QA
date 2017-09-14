@@ -11,7 +11,7 @@ class Upload extends Model
     static function saveExport($path){
     	Excel::load('storage/app/' . $path, function($reader) {
 
-            include 'includes/upload/campaignProperties.php'; //Don't need to loop through the rows 
+            include 'includes/upload/campaigns.php'; //Don't need to loop through the rows 
 
     		$reader->each(function($sheet) {
 

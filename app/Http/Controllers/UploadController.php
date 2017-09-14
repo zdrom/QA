@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Upload;
-use App\CampaignProperty;
+use App\Campaign;
 
 class UploadController extends Controller
 {
@@ -17,7 +17,7 @@ class UploadController extends Controller
 
 	public function index()
 	{	
-		$campaigns = CampaignProperty::latest()->get();
+		$campaigns = Campaign::latest()->get();
 
 		return view('upload.campaigns',compact('campaigns'));
 	}
@@ -33,10 +33,10 @@ class UploadController extends Controller
 
 		Upload::saveExport($path);
 
-		return redirect ('/campaign/' . CampaignProperty::latest()->first()->id);
+		return redirect ('/campaign/' . Campaign::latest()->first()->id);
 	}
 
-	public function show(CampaignProperty $campaign)
+	public function show(Campaign $campaign)
 	{
 		return view('campaign.index', compact('campaign'));
 	}

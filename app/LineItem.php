@@ -17,7 +17,7 @@ class LineItem extends Model
 
 	public function campaign()
 	{
-		return $this->belongsTo(CampaignProperty::class);
+		return $this->belongsTo(Campaign::class);
 	}
 
 	public function strategies()

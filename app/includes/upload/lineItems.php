@@ -1,13 +1,13 @@
 <?php
 
 use App\lineItem;
-use App\CampaignProperty;
+use App\Campaign;
 
 $sheet->each(function($row) {
 
     LineItem::create([
 
-        'campaign_property_id' =>     CampaignProperty::nameToID($GLOBALS['campaignName']),
+        'campaign_id' =>     Campaign::nameToID($GLOBALS['campaignName']),
         'line_item_id' => $row->line_item_id,
         'lineitemname' => $row->lineitemname,
         'io_line_item_budget' => $row->io_line_item_budget,
