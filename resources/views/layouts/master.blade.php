@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Quality Assurance - @yield('title')</title>
+	<title>QA | @yield('title')</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -12,8 +12,25 @@
 </head>
 <body>
 @include('layouts.navbar')
+
 <div class="container-fluid">
-@yield('content')
-</div>
+
+	<div class="row">
+		<div class="col-1">
+		<a href="@yield('backButton')">
+			<p>back</p>
+		</a>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			<h3>@yield('header')</h3>
+		</div>
+	</div>
+
+	@yield('content')
+
+</div><!--container-->
 </body>
 </html>

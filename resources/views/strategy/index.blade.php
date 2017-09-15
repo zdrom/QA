@@ -1,24 +1,18 @@
 @extends('layouts.master')
 
 @section('title')
-Strategy
+{{ $strategy->name }}
+@endsection
+
+@section('backButton')
+/lineItem/{{ $strategy->lineItem->id }}
+@endsection
+
+@section('header')
+{{ $strategy->name }}
 @endsection
 
 @section('content')
-
-<div class="row">
-	<div class="col-1">
-	<a href="/lineItem/{{ $strategy->lineItem->id }}">
-		<p>back</p>
-	</a>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-12">
-		<h3>{{ $strategy->name }}</h3>
-	</div>		
-</div>
 
 <div class="row">
 	<div class="col-12">

@@ -1,24 +1,18 @@
 @extends('layouts.master')
 
 @section('title')
-Line Item
+{{ $lineItem->lineitemname }}
+@endsection
+
+@section('backButton')
+/campaign/{{ $lineItem->campaign->id }}
+@endsection
+
+@section('header')
+{{ $lineItem->lineitemname }}
 @endsection
 
 @section('content')
-
-<div class="row">
-	<div class="col-1">
-	<a href="/campaign/{{ $lineItem->campaign->id }}">
-		<p>back</p>
-	</a>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-12">
-		<h3>{{ $lineItem->lineitemname }}</h3>
-	</div>		
-</div>
 
 <div class="row">
 	<div class="col-12">
