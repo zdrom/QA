@@ -10,9 +10,9 @@ Campaign::create([
 
 	'user_id' => auth()->id(),
 	'campaign_name' => $cp->getCell('B1'),
-	'start_date' => $cp->getCell('B3'),
-	'end_date' => $cp->getCell('B4'),
-	'salesforce_id' => $cp->getCell('B5'),
-	'barometric_campaign_id' => $cp->getCell('B7')
+	'start_date' => $cp->getCell('B4'),
+	'end_date' => $cp->getCell('B5'),
+	'salesforce_id' => $cp->getCell('B6'),
+	'barometric_campaign_id' => $cp->getCell('B8')
 	
 ]);

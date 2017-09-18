@@ -19,10 +19,11 @@ Route::post('/create', 'UploadController@store');
 
 Route::get('/campaign/{campaign}', 'UploadController@show');
 
-Route::get('/lineItem/{lineItem}' , 'LineItemController@show');
+Route::get('/campaign/{campaign}/lineitem/{lineItem}' , 'LineItemController@show');
 
-Route::get('/strategy/{strategy}', 'StrategyController@show');
+Route::get('/campaign/{campaign}/lineitem/{lineItem}/strategy/{strategy}', 'StrategyController@show');
 
+Route::get('/campaign/{campaign}/creatives', 'CreativeController@show');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();

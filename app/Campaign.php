@@ -24,4 +24,9 @@ class Campaign extends Model
 	{
 		return $this->hasMany(lineItem::class);
 	}
+
+	   	public function creatives()
+	{
+		return $this->hasMany(Creative::class);
+	}
 }

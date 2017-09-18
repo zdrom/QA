@@ -16,6 +16,7 @@ class CreateCreativesTable extends Migration
         Schema::create('creatives', function (Blueprint $table) {
             $table->increments('id');
 
+            $table->integer('campaign_id');
             $table->string('associated_line_items')->nullable();
             $table->string('creative_name')->nullable();
             $table->string('ad_format')->nullable();
@@ -31,6 +32,7 @@ class CreateCreativesTable extends Migration
             $table->string('creative_template')->nullable();
             $table->string('unique_creative_id')->nullable();
             $table->integer('barometric_placement_id')->nullable();
+            $table->longText('tracking_tag')->nullable();
 
             $table->timestamps();
         });

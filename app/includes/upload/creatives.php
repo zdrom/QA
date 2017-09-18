@@ -1,11 +1,13 @@
 <?php
 
 use App\Creative;
+use App\Campaign;
 
 $sheet->each(function($row) {
 
 	Creative::create([
 
+		'campaign_id' => Campaign::nameToID($GLOBALS['campaignName']),
 		'associated_line_items' => $row->associated_lineitems,
 		'creative_name' => $row->creative_name,
 		'ad_format' => $row->ad_format,
@@ -20,7 +22,8 @@ $sheet->each(function($row) {
 		'creative_template' => $row->creative_template,
 		'unique_creative_id' => $row->unique_creative_id,
 		// '3p_ad_id' => $row->'3p_ad_id';
-		'barometric_placement_id' => $row->barometric_placement_id
+		'barometric_placement_id' => $row->barometric_placement_id,
+		'tracking_tag' =>$row->tracking_tag
 		]);
 
 });

@@ -5,7 +5,7 @@
 @endsection
 
 @section('backButton')
-/lineItem/{{ $strategy->lineItem->id }}
+/campaign/{{ $strategy->lineItem->campaign->id }}/lineitem/{{ $strategy->lineItem->id }}
 @endsection
 
 @section('header')

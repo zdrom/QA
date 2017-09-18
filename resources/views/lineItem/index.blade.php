@@ -28,7 +28,7 @@
 		  <div class="card-block">
 		    <h4 class="card-title">Strategies</h4>
 			    @foreach($lineItem->strategies as $strategy)
-			    	<a href="/strategy/{{ $strategy->id }}">
+			    	<a href="/campaign/{{ $lineItem->campaign->id }}/lineitem/{{ $lineItem->id }}/strategy/{{ $strategy->id }}">
 			    		<h6>{{ $strategy->name }}</h6>
 			    	</a>
 			    	<hr>
