@@ -16,7 +16,7 @@ $sheet->each(function($row) {
         'geography_dma' => $row->geography_dma,
         'geography_state' => $row->geography_state,
         'geography_city' => $row->geography_city,
-        'device_Type' => $row->device_Type,
+        'device_type' => $row->device_type,
         'content_appsite_type' => $row->content_appsite_type,
         'creatives' => $row->creatives
 

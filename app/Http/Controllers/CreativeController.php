@@ -13,6 +13,8 @@ class CreativeController extends Controller
 {
 	public function show(Campaign $campaign)
 	{
-		return view('creative.index', compact('campaign'));
+
+		return view('/');
+
 	}
 }

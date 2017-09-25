@@ -13,4 +13,9 @@ class Creative extends Model
 		return $this->belongsTo(Campaign::class);
 	}
 
+	static function checkSize()
+	{
+		return $this->check_size;
+	}
+
 }

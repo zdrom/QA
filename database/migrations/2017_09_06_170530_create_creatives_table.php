@@ -34,6 +34,10 @@ class CreateCreativesTable extends Migration
             $table->integer('barometric_placement_id')->nullable();
             $table->longText('tracking_tag')->nullable();
 
+            $table->boolean('check_placement_id')->default(0);
+            $table->boolean('check_size')->default(0);
+            $table->boolean('check_click_macro')->nullable();
+
             $table->timestamps();
         });
     }

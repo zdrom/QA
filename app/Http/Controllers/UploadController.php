@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Upload;
 use App\Campaign;
+use App\Creative;
 
 class UploadController extends Controller
 {
@@ -38,7 +39,17 @@ class UploadController extends Controller
 
 	public function show(Campaign $campaign)
 	{
-		return view('campaign.index', compact('campaign'));
+		$uniqueCreativeList = Creative::where('campaign_id', $campaign->id)->get()->unique('creative_name')->toArray();
+		//The export contains multiple rows of the same creative depending on how many tracking tags are appened
+		//This finds the unique list of creatives
+
+		$creatives = [];
+
+		foreach ($uniqueCreativeList as $uniqueCreative) {
+			array_push($creatives, ['creativeName' => $uniqueCreative['creative_name'],'sizeCheck' => $uniqueCreative['check_size'], 'placementIDCheck' => $uniqueCreative['check_placement_id'],'macroCheck' => $uniqueCreative['check_click_macro'],'trackingTags' => Creative::select('tracking_tag')->where('creative_name', $uniqueCreative['creative_name'])->get()->toArray()]); 
+		}
+
+		return view('campaign.index', compact('campaign', 'creatives'));
 	}
 
 }

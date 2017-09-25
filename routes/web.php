@@ -26,4 +26,5 @@ Route::get('/campaign/{campaign}/lineitem/{lineItem}/strategy/{strategy}', 'Stra
 Route::get('/campaign/{campaign}/creatives', 'CreativeController@show');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Auth::routes();
