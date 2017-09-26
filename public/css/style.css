@@ -4,47 +4,82 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
 	color: #3C95A4;
-	font-weight: bold;
+	font-weight: 400;
+	letter-spacing: 1px;
 }
 
 a, a:hover, a:focus {
 	color: #E6E6E6;
 	text-decoration: none;
+	font-weight: 300;
+	letter-spacing: 1px;
 }
 
 nav {
-	background-color: #181919;
+	background-color: #3C95A4;;
+}
+
+code {
+	background-color: #2F4F4F;
+	color: #fff;
+}
+
+form {
+	font-family: San Francisco;
+	font-weight: 400;
+	color: white;
 }
 
 .navbar-brand {
-	font-weight: bold;
+	font-weight: 800;
 	font-style: italic;
 }
 
 .card {
 	background-color: #181919;
-	border: 1px solid #252626;
+	border: 1px solid #3C95A4;;
 }
 
 .card h4 {
-	font-weight: bold;
+	font-weight: 400;
 	font-style: italic;
 }
 
 @font-face{
 	font-family: "San Francisco";
 	src: url("/css/fonts/SF-Pro-Display-Light.otf");
+	font-weight: 200
 }
 
 @font-face{
 	font-family: "San Francisco";
-	src: url("/css/fonts/SF-Pro-Display-Semibold.otf");
-	font-weight: bold;
+	src: url("/css/fonts/SF-Pro-Display-Regular.otf");
+	font-weight: 300
+}
+
+
+@font-face{
+	font-family: "San Francisco";
+	src: url("/css/fonts/SF-Pro-Display-Heavy.otf");
+	font-weight: 400;
+}
+
+@font-face{
+	font-family: "San Francisco";
+	src: url("/css/fonts/SF-Pro-Display-SemiboldItalic.otf");
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face{
+	font-family: "San Francisco";
+	src: url("/css/fonts/SF-Pro-Display-Black.otf");
+	font-weight: 800;
 }
 
 @font-face{
 	font-family: "San Francisco";
 	src: url("/css/fonts/SF-Pro-Display-BlackItalic.otf");
-	font-weight: bold;
+	font-weight: 800;
 	font-style: italic;
 }
